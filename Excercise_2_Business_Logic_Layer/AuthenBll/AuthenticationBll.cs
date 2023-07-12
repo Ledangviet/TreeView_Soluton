@@ -111,7 +111,7 @@ namespace Excercise_2_Business_Logic_Layer.AuthenBll
 
 
         //Clear refreshtoken & expired time
-        public async Task<bool> LogOut(string email)
+        public async Task<bool> LogOutAsync(string email)
         {
             try
             {
@@ -157,7 +157,7 @@ namespace Excercise_2_Business_Logic_Layer.AuthenBll
                     res.Token = accessToken;                    
                     return res;
                 }
-                await LogOut(user.Email);
+                await LogOutAsync(user.Email);
                 res.Status = false;
                 res.StatusMessage = "Token expired!";
                 return res;

@@ -14,5 +14,6 @@ namespace Excercise_2_Business_Logic_Layer.AuthenBll
         public Task<SignInResponseModel> SignInAsync(SignInModel model);
         public Task<SignUpResponseModel> SignUpAsync(SignUpModel model);
         public Task<TokenResponse> GetToken(TokenModel model);
+        public Task<bool> LogOutAsync(string email);
     }
 }
